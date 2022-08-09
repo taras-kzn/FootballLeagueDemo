@@ -24,7 +24,7 @@
 		84AB2A0E28A2999E0098365F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84AB2A1028A299A00098365F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84AB2A1328A299A00098365F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		84AB2A1528A299A00098365F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84AB2A1528A299A00098365F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = FootballLeagueDemo/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		84AB2A1B28A299EB0098365F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,15 +59,47 @@
 		84AB2A0628A2999E0098365F /* FootballLeagueDemo */ = {
 			isa = PBXGroup;
 			children = (
-				84AB2A0728A2999E0098365F /* AppDelegate.swift */,
-				84AB2A0928A2999E0098365F /* SceneDelegate.swift */,
+				84AB2A1E28A2B2CC0098365F /* App */,
+				84AB2A1D28A2AECA0098365F /* Resources */,
 				84AB2A0B28A2999E0098365F /* ViewController.swift */,
-				84AB2A0D28A2999E0098365F /* Main.storyboard */,
-				84AB2A1028A299A00098365F /* Assets.xcassets */,
-				84AB2A1228A299A00098365F /* LaunchScreen.storyboard */,
-				84AB2A1528A299A00098365F /* Info.plist */,
 			);
 			path = FootballLeagueDemo;
+			sourceTree = "<group>";
+		};
+		84AB2A1D28A2AECA0098365F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84AB2A1528A299A00098365F /* Info.plist */,
+				84AB2A1028A299A00098365F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84AB2A1E28A2B2CC0098365F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				84AB2A1F28A2B3F40098365F /* Controller */,
+				84AB2A2028A2B4080098365F /* View */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		84AB2A1F28A2B3F40098365F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84AB2A0728A2999E0098365F /* AppDelegate.swift */,
+				84AB2A0928A2999E0098365F /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84AB2A2028A2B4080098365F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84AB2A0D28A2999E0098365F /* Main.storyboard */,
+				84AB2A1228A299A00098365F /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +327,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2PQ8675BM6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FootballLeagueDemo/Info.plist;
+				INFOPLIST_FILE = FootballLeagueDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +355,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2PQ8675BM6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FootballLeagueDemo/Info.plist;
+				INFOPLIST_FILE = FootballLeagueDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
