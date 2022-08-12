@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		846E6D5428A619F800D84D65 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6D5328A619F800D84D65 /* SignUpViewController.swift */; };
+		846E6D5928A61F3000D84D65 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6D5828A61F3000D84D65 /* OneLineTextField.swift */; };
+		846E6D5B28A6206500D84D65 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6D5A28A6206500D84D65 /* UIColor+Extension.swift */; };
 		84AB2A0828A2999E0098365F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB2A0728A2999E0098365F /* AppDelegate.swift */; };
 		84AB2A0A28A2999E0098365F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB2A0928A2999E0098365F /* SceneDelegate.swift */; };
 		84AB2A0C28A2999E0098365F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB2A0B28A2999E0098365F /* AuthViewController.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		846E6D5328A619F800D84D65 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		846E6D5828A61F3000D84D65 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		846E6D5A28A6206500D84D65 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		84AB2A0428A2999E0098365F /* FootballLeagueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballLeagueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AB2A0728A2999E0098365F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84AB2A0928A2999E0098365F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		846E6D5528A61A0C00D84D65 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				846E6D5328A619F800D84D65 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		846E6D5628A61E6A00D84D65 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				846E6D5528A61A0C00D84D65 /* SignUp */,
+				84AB2A2128A2BBAD0098365F /* Authorization */,
+				84AB2A3028A2FCA90098365F /* View */,
+				84AB2A2228A2DD400098365F /* Helpers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		846E6D5728A61EFB00D84D65 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				846E6D5828A61F3000D84D65 /* OneLineTextField.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
 		84AB29FB28A2999E0098365F = {
 			isa = PBXGroup;
 			children = (
@@ -69,8 +102,7 @@
 		84AB2A0628A2999E0098365F /* FootballLeagueDemo */ = {
 			isa = PBXGroup;
 			children = (
-				84AB2A2128A2BBAD0098365F /* Authorization */,
-				84AB2A2228A2DD400098365F /* Helpers */,
+				846E6D5628A61E6A00D84D65 /* Classes */,
 				84AB2A1E28A2B2CC0098365F /* App */,
 				84AB2A1D28A2AECA0098365F /* Resources */,
 			);
@@ -123,7 +155,6 @@
 		84AB2A2228A2DD400098365F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				84AB2A3028A2FCA90098365F /* View */,
 				84AB2A2528A2DEE70098365F /* Extensions */,
 			);
 			path = Helpers;
@@ -137,6 +168,7 @@
 				84AB2A2828A2ECBC0098365F /* UILabel+Extension.swift */,
 				84AB2A2A28A2EFD30098365F /* UIImageView+Extension.swift */,
 				84AB2A2E28A2FB930098365F /* StackView+Extension.swift */,
+				846E6D5A28A6206500D84D65 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -144,6 +176,7 @@
 		84AB2A3028A2FCA90098365F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				846E6D5728A61EFB00D84D65 /* CustomControls */,
 				84AB2A2C28A2F2EB0098365F /* ButtonFormView.swift */,
 			);
 			path = View;
@@ -223,8 +256,11 @@
 				84AB2A0C28A2999E0098365F /* AuthViewController.swift in Sources */,
 				84AB2A2428A2DE0C0098365F /* UIButton+Extension.swift in Sources */,
 				84AB2A2F28A2FB930098365F /* StackView+Extension.swift in Sources */,
+				846E6D5B28A6206500D84D65 /* UIColor+Extension.swift in Sources */,
 				84AB2A2D28A2F2EB0098365F /* ButtonFormView.swift in Sources */,
+				846E6D5428A619F800D84D65 /* SignUpViewController.swift in Sources */,
 				84AB2A2B28A2EFD30098365F /* UIImageView+Extension.swift in Sources */,
+				846E6D5928A61F3000D84D65 /* OneLineTextField.swift in Sources */,
 				84AB2A2928A2ECBC0098365F /* UILabel+Extension.swift in Sources */,
 				84AB2A0828A2999E0098365F /* AppDelegate.swift in Sources */,
 				84AB2A2728A2E15C0098365F /* UIFont+Extension.swift in Sources */,
