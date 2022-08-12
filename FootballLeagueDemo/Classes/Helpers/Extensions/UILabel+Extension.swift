@@ -8,9 +8,11 @@
 import UIKit
 
 extension UILabel {
-    convenience init(text: String) {
+    convenience init(text: String, font: UIFont? = .semiBold20(),textColor: UIColor) {
         self.init()
 
         self.text = text
+        self.font = font
+        self.textColor = textColor
     }
 }
