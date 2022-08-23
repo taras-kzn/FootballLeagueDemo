@@ -12,7 +12,6 @@
 		846E6D5B28A6206500D84D65 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6D5A28A6206500D84D65 /* UIColor+Extension.swift */; };
 		846E6D5E28A649A500D84D65 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6D5D28A649A500D84D65 /* NetworkService.swift */; };
 		846E6D6028A64B1500D84D65 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6D5F28A64B1500D84D65 /* API.swift */; };
-		846E6D6328A64E2700D84D65 /* AllLeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6D6228A64E2700D84D65 /* AllLeaguesViewController.swift */; };
 		846E6D6628A659BF00D84D65 /* LeaguesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6D6528A659BF00D84D65 /* LeaguesResponse.swift */; };
 		846E6D6828A65D2600D84D65 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6D6728A65D2600D84D65 /* NetworkDataFetcher.swift */; };
 		84AB2A0828A2999E0098365F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB2A0728A2999E0098365F /* AppDelegate.swift */; };
@@ -27,6 +26,13 @@
 		84AB2A2B28A2EFD30098365F /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB2A2A28A2EFD30098365F /* UIImageView+Extension.swift */; };
 		84AB2A2D28A2F2EB0098365F /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB2A2C28A2F2EB0098365F /* ButtonFormView.swift */; };
 		84AB2A2F28A2FB930098365F /* StackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB2A2E28A2FB930098365F /* StackView+Extension.swift */; };
+		CC79139328B53ABE0051C876 /* LeaguesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79138C28B53ABE0051C876 /* LeaguesListPresenter.swift */; };
+		CC79139428B53ABE0051C876 /* LeaguesListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79138D28B53ABE0051C876 /* LeaguesListWorker.swift */; };
+		CC79139528B53ABE0051C876 /* LeaguesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79138E28B53ABE0051C876 /* LeaguesListRouter.swift */; };
+		CC79139628B53ABE0051C876 /* LeaguesListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79138F28B53ABE0051C876 /* LeaguesListModels.swift */; };
+		CC79139728B53ABE0051C876 /* LeaguesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79139028B53ABE0051C876 /* LeaguesListViewController.swift */; };
+		CC79139828B53ABE0051C876 /* LeaguesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79139128B53ABE0051C876 /* LeaguesListInteractor.swift */; };
+		CC79139928B53ABE0051C876 /* LeaguesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC79139228B53ABE0051C876 /* LeaguesListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +41,6 @@
 		846E6D5A28A6206500D84D65 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		846E6D5D28A649A500D84D65 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		846E6D5F28A64B1500D84D65 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		846E6D6228A64E2700D84D65 /* AllLeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLeaguesViewController.swift; sourceTree = "<group>"; };
 		846E6D6528A659BF00D84D65 /* LeaguesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesResponse.swift; sourceTree = "<group>"; };
 		846E6D6728A65D2600D84D65 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		84AB2A0428A2999E0098365F /* FootballLeagueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballLeagueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +57,13 @@
 		84AB2A2A28A2EFD30098365F /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		84AB2A2C28A2F2EB0098365F /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		84AB2A2E28A2FB930098365F /* StackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+Extension.swift"; sourceTree = "<group>"; };
+		CC79138C28B53ABE0051C876 /* LeaguesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesListPresenter.swift; sourceTree = "<group>"; };
+		CC79138D28B53ABE0051C876 /* LeaguesListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesListWorker.swift; sourceTree = "<group>"; };
+		CC79138E28B53ABE0051C876 /* LeaguesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesListRouter.swift; sourceTree = "<group>"; };
+		CC79138F28B53ABE0051C876 /* LeaguesListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesListModels.swift; sourceTree = "<group>"; };
+		CC79139028B53ABE0051C876 /* LeaguesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesListViewController.swift; sourceTree = "<group>"; };
+		CC79139128B53ABE0051C876 /* LeaguesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesListInteractor.swift; sourceTree = "<group>"; };
+		CC79139228B53ABE0051C876 /* LeaguesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaguesListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +88,7 @@
 		846E6D5628A61E6A00D84D65 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				846E6D6128A64E0700D84D65 /* AllLeagues */,
+				846E6D6128A64E0700D84D65 /* LeaguesList */,
 				846E6D5528A61A0C00D84D65 /* SignUp */,
 				84AB2A2128A2BBAD0098365F /* Authorization */,
 				84AB2A3028A2FCA90098365F /* View */,
@@ -104,12 +116,18 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		846E6D6128A64E0700D84D65 /* AllLeagues */ = {
+		846E6D6128A64E0700D84D65 /* LeaguesList */ = {
 			isa = PBXGroup;
 			children = (
-				846E6D6228A64E2700D84D65 /* AllLeaguesViewController.swift */,
+				CC79139228B53ABE0051C876 /* LeaguesListViewController.xib */,
+				CC79139028B53ABE0051C876 /* LeaguesListViewController.swift */,
+				CC79139128B53ABE0051C876 /* LeaguesListInteractor.swift */,
+				CC79138C28B53ABE0051C876 /* LeaguesListPresenter.swift */,
+				CC79138D28B53ABE0051C876 /* LeaguesListWorker.swift */,
+				CC79138E28B53ABE0051C876 /* LeaguesListRouter.swift */,
+				CC79138F28B53ABE0051C876 /* LeaguesListModels.swift */,
 			);
-			path = AllLeagues;
+			path = LeaguesList;
 			sourceTree = "<group>";
 		};
 		846E6D6428A6597F00D84D65 /* Models */ = {
@@ -282,6 +300,7 @@
 				84AB2A1C28A299EB0098365F /* .gitignore in Resources */,
 				84AB2A1428A299A00098365F /* LaunchScreen.storyboard in Resources */,
 				84AB2A1128A299A00098365F /* Assets.xcassets in Resources */,
+				CC79139928B53ABE0051C876 /* LeaguesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,13 +313,18 @@
 			files = (
 				84AB2A0C28A2999E0098365F /* AuthViewController.swift in Sources */,
 				84AB2A2428A2DE0C0098365F /* UIButton+Extension.swift in Sources */,
+				CC79139528B53ABE0051C876 /* LeaguesListRouter.swift in Sources */,
 				84AB2A2F28A2FB930098365F /* StackView+Extension.swift in Sources */,
+				CC79139628B53ABE0051C876 /* LeaguesListModels.swift in Sources */,
 				846E6D5B28A6206500D84D65 /* UIColor+Extension.swift in Sources */,
+				CC79139428B53ABE0051C876 /* LeaguesListWorker.swift in Sources */,
 				84AB2A2D28A2F2EB0098365F /* ButtonFormView.swift in Sources */,
+				CC79139328B53ABE0051C876 /* LeaguesListPresenter.swift in Sources */,
 				846E6D6628A659BF00D84D65 /* LeaguesResponse.swift in Sources */,
-				846E6D6328A64E2700D84D65 /* AllLeaguesViewController.swift in Sources */,
 				846E6D5428A619F800D84D65 /* SignUpViewController.swift in Sources */,
+				CC79139828B53ABE0051C876 /* LeaguesListInteractor.swift in Sources */,
 				846E6D6028A64B1500D84D65 /* API.swift in Sources */,
+				CC79139728B53ABE0051C876 /* LeaguesListViewController.swift in Sources */,
 				846E6D6828A65D2600D84D65 /* NetworkDataFetcher.swift in Sources */,
 				84AB2A2B28A2EFD30098365F /* UIImageView+Extension.swift in Sources */,
 				846E6D5928A61F3000D84D65 /* OneLineTextField.swift in Sources */,

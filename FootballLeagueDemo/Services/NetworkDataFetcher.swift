@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol DataFetcher {
+protocol DataFetcherProtocol {
     func getLeagues(response: @escaping (LeaguesResponse?) -> Void)
 }
 
-struct NetworkDataFetcher: DataFetcher {
-    let networking: Networking
+struct NetworkDataFetcher: DataFetcherProtocol {
+    let networking: NetworkingProtocol
 
-    init(networking: Networking) {
+    init(networking: NetworkingProtocol) {
         self.networking = networking
     }
 
