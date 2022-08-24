@@ -9,18 +9,26 @@
 import UIKit
 
 protocol LeaguesListBusinessLogic {
-  func makeRequest(request: LeaguesList.Model.Request.RequestType)
+    func makeRequest(request: LeaguesList.Model.Request.RequestType)
 }
 
 class LeaguesListInteractor: LeaguesListBusinessLogic {
 
-  var presenter: LeaguesListPresentationLogic?
-  var service: LeaguesListService?
+    var presenter: LeaguesListPresentationLogic?
+    var service: LeaguesListService?
 
-  func makeRequest(request: LeaguesList.Model.Request.RequestType) {
-    if service == nil {
-      service = LeaguesListService()
+    func makeRequest(request: LeaguesList.Model.Request.RequestType) {
+        if service == nil {
+            service = LeaguesListService()
+        }
+
+        switch request {
+        case .some:
+            print("some Interactor")
+        case .getLeagues:
+            print("getLeagues")
+            presenter?.presentData(response: .presentLeagues)
+        }
     }
-  }
 
 }

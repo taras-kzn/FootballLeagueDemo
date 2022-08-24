@@ -33,6 +33,7 @@
 		CC79139728B53ABE0051C876 /* LeaguesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79139028B53ABE0051C876 /* LeaguesListViewController.swift */; };
 		CC79139828B53ABE0051C876 /* LeaguesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79139128B53ABE0051C876 /* LeaguesListInteractor.swift */; };
 		CC79139928B53ABE0051C876 /* LeaguesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC79139228B53ABE0051C876 /* LeaguesListViewController.xib */; };
+		CC79139B28B5ECCB0051C876 /* LeaguesCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79139A28B5ECCB0051C876 /* LeaguesCodeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		CC79139028B53ABE0051C876 /* LeaguesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesListViewController.swift; sourceTree = "<group>"; };
 		CC79139128B53ABE0051C876 /* LeaguesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesListInteractor.swift; sourceTree = "<group>"; };
 		CC79139228B53ABE0051C876 /* LeaguesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaguesListViewController.xib; sourceTree = "<group>"; };
+		CC79139A28B5ECCB0051C876 /* LeaguesCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesCodeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CC79139228B53ABE0051C876 /* LeaguesListViewController.xib */,
+				CC79139A28B5ECCB0051C876 /* LeaguesCodeCell.swift */,
 				CC79139028B53ABE0051C876 /* LeaguesListViewController.swift */,
 				CC79139128B53ABE0051C876 /* LeaguesListInteractor.swift */,
 				CC79138C28B53ABE0051C876 /* LeaguesListPresenter.swift */,
@@ -323,6 +326,7 @@
 				846E6D6628A659BF00D84D65 /* LeaguesResponse.swift in Sources */,
 				846E6D5428A619F800D84D65 /* SignUpViewController.swift in Sources */,
 				CC79139828B53ABE0051C876 /* LeaguesListInteractor.swift in Sources */,
+				CC79139B28B5ECCB0051C876 /* LeaguesCodeCell.swift in Sources */,
 				846E6D6028A64B1500D84D65 /* API.swift in Sources */,
 				CC79139728B53ABE0051C876 /* LeaguesListViewController.swift in Sources */,
 				846E6D6828A65D2600D84D65 /* NetworkDataFetcher.swift in Sources */,

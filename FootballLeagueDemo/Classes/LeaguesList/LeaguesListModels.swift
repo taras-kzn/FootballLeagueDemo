@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 enum LeaguesList {
 
@@ -14,18 +15,20 @@ enum LeaguesList {
     struct Request {
       enum RequestType {
         case some
+        case getLeagues
       }
     }
     struct Response {
       enum ResponseType {
         case some
+        case presentLeagues
       }
     }
     struct ViewModel {
       enum ViewModelData {
         case some
+        case displayLeagues
       }
     }
   }
-
 }

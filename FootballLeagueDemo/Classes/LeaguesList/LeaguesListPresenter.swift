@@ -16,7 +16,13 @@ class LeaguesListPresenter: LeaguesListPresentationLogic {
   weak var viewController: LeaguesListDisplayLogic?
 
   func presentData(response: LeaguesList.Model.Response.ResponseType) {
-
+      switch response {
+      case .some:
+          print("some present")
+      case .presentLeagues:
+          print("presentLeagues")
+          viewController?.displayData(viewModel: .displayLeagues)
+      }
   }
 
 }
