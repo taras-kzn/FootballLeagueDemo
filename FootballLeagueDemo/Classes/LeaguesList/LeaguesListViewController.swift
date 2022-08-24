@@ -20,6 +20,15 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
 
     private var leagueViewModel = LeagueViewModel.init(cells: [])
 
+    private var loadingIndicator: UIActivityIndicatorView = {
+        let loading = UIActivityIndicatorView()
+        loading.hidesWhenStopped = true
+        loading.startAnimating()
+        loading.color = .orange
+        loading.style = .large
+        return loading
+    }()
+
     var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -44,10 +53,11 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setup()
-        configure()
+        setupTable()
         setupConstraintsTableView()
+        setupConstraintsLoadingIndicator()
         interactor?.makeRequest(request: .getLeagues)
     }
 
@@ -56,11 +66,12 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
         case .displayLeagues(leaguesViewModel: let leaguesViewModel):
             leagueViewModel = leaguesViewModel
             tableView.reloadData()
+            loadingIndicator.stopAnimating()
         }
     }
 
-    //MARK: - configure
-    private func configure() {
+    //MARK: - Setup
+    private func setupTable() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
@@ -77,6 +88,14 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+
+    private func setupConstraintsLoadingIndicator() {
+        tableView.addSubview(loadingIndicator)
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+
+        loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
 

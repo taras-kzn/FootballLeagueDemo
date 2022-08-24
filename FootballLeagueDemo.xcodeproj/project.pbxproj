@@ -125,8 +125,8 @@
 				CC79139A28B5ECCB0051C876 /* LeaguesCodeCell.swift */,
 				CC79139028B53ABE0051C876 /* LeaguesListViewController.swift */,
 				CC79139128B53ABE0051C876 /* LeaguesListInteractor.swift */,
-				CC79138C28B53ABE0051C876 /* LeaguesListPresenter.swift */,
 				CC79138D28B53ABE0051C876 /* LeaguesListWorker.swift */,
+				CC79138C28B53ABE0051C876 /* LeaguesListPresenter.swift */,
 				CC79138E28B53ABE0051C876 /* LeaguesListRouter.swift */,
 				CC79138F28B53ABE0051C876 /* LeaguesListModels.swift */,
 			);

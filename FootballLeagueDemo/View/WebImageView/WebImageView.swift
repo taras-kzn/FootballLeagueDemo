@@ -11,7 +11,11 @@ import UIKit
 //TODO: Можно будет сделать отдельную библиотеку для других проектов. SPM пакет
 class WebImageView: UIImageView {
 
+    private var currentUrlString: String?
+
     func set(imageUrl: String?) {
+
+        currentUrlString = imageUrl
         guard let imageUrl = imageUrl, let url = URL(string: imageUrl) else { return }
 
         if let cachedResponse = URLCache.shared.cachedResponse(for: URLRequest(url: url)) {
@@ -22,7 +26,6 @@ class WebImageView: UIImageView {
         let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             DispatchQueue.main.async {
                 if let data = data, let response = response {
-                    self?.image = UIImage(data: data)
                     self?.handleLoaderImage(data: data, response: response)
                 }
             }
@@ -34,5 +37,9 @@ class WebImageView: UIImageView {
         guard let responseUrl = response.url else { return }
         let cashedResponse = CachedURLResponse(response: response, data: data)
         URLCache.shared.storeCachedResponse(cashedResponse, for: URLRequest(url: responseUrl))
+
+        if responseUrl.absoluteString == currentUrlString {
+            self.image = UIImage(data: data)
+        }
     }
 }
