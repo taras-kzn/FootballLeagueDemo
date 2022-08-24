@@ -14,21 +14,28 @@ enum LeaguesList {
   enum Model {
     struct Request {
       enum RequestType {
-        case some
         case getLeagues
       }
     }
     struct Response {
       enum ResponseType {
-        case some
-        case presentLeagues
+          case presentLeagues(leagues: LeaguesResponse)
       }
     }
     struct ViewModel {
       enum ViewModelData {
-        case some
-        case displayLeagues
+          case displayLeagues(leaguesViewModel: LeagueViewModel)
       }
     }
   }
+}
+
+struct LeagueViewModel {
+    struct Cell: leagueCellViewModel {
+        var title: String
+        var iconUrlString: String
+        var abbreviation: String
+    }
+
+    let cells: [Cell]
 }

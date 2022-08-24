@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+protocol leagueCellViewModel {
+    var title: String { get }
+    var iconUrlString: String { get }
+    var abbreviation: String { get }
+}
+
 final class LeaguesCodeCell: UITableViewCell {
 
     //MARK: - Properties
@@ -28,6 +34,7 @@ final class LeaguesCodeCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.font = .semiBold26()
+        label.textAlignment = .center
         label.backgroundColor = .brown
         return label
     }()
@@ -45,6 +52,7 @@ final class LeaguesCodeCell: UITableViewCell {
         label.numberOfLines = 0
         label.text = "abbreviationLabel"
         label.font = .semiBold20()
+        label.textAlignment = .center
         label.backgroundColor = .darkGray
         return label
     }()
@@ -53,7 +61,6 @@ final class LeaguesCodeCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        backgroundColor = .blue
         setupConstraints()
     }
 
@@ -62,8 +69,9 @@ final class LeaguesCodeCell: UITableViewCell {
     }
 
     //MARK: - setup
-    func set(viewModel: String) {
-        titleLabel.text = viewModel
+    func set(viewModel: leagueCellViewModel) {
+        titleLabel.text = viewModel.title
+        abbreviationLabel.text = viewModel.abbreviation
     }
 
     //MARK: - setupConstraints

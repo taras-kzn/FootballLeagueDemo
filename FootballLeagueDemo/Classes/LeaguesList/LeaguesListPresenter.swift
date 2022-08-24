@@ -9,20 +9,28 @@
 import UIKit
 
 protocol LeaguesListPresentationLogic {
-  func presentData(response: LeaguesList.Model.Response.ResponseType)
+    func presentData(response: LeaguesList.Model.Response.ResponseType)
 }
 
 class LeaguesListPresenter: LeaguesListPresentationLogic {
-  weak var viewController: LeaguesListDisplayLogic?
+    weak var viewController: LeaguesListDisplayLogic?
 
-  func presentData(response: LeaguesList.Model.Response.ResponseType) {
-      switch response {
-      case .some:
-          print("some present")
-      case .presentLeagues:
-          print("presentLeagues")
-          viewController?.displayData(viewModel: .displayLeagues)
-      }
-  }
+    func presentData(response: LeaguesList.Model.Response.ResponseType) {
+        switch response {
+        case .presentLeagues(leagues: let leagues):
 
+            let cells = leagues.data.map { leagues in
+                cellViewModel(from: leagues)
+            }
+
+            let leaguesViewModel = LeagueViewModel.init(cells: cells)
+            viewController?.displayData(viewModel: .displayLeagues(leaguesViewModel: leaguesViewModel))
+        }
+    }
+
+    private func cellViewModel(from data: AllLeagues) -> LeagueViewModel.Cell {
+        return LeagueViewModel.Cell.init(title: data.name,
+                                         iconUrlString: data.logos.light,
+                                         abbreviation: data.abbr)
+    }
 }

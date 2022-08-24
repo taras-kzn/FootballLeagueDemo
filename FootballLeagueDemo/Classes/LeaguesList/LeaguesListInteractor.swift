@@ -16,6 +16,7 @@ class LeaguesListInteractor: LeaguesListBusinessLogic {
 
     var presenter: LeaguesListPresentationLogic?
     var service: LeaguesListService?
+    private var fetcher: DataFetcherProtocol = NetworkDataFetcher(networking: NetworkService())
 
     func makeRequest(request: LeaguesList.Model.Request.RequestType) {
         if service == nil {
@@ -23,12 +24,11 @@ class LeaguesListInteractor: LeaguesListBusinessLogic {
         }
 
         switch request {
-        case .some:
-            print("some Interactor")
         case .getLeagues:
-            print("getLeagues")
-            presenter?.presentData(response: .presentLeagues)
+            fetcher.getLeagues { [weak self] leaguesResponse in
+                guard let leaguesResponse = leaguesResponse, let self = self else { return }
+                self.presenter?.presentData(response: .presentLeagues(leagues: leaguesResponse))
+            }
         }
     }
-
 }

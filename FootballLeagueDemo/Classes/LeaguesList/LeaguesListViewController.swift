@@ -18,6 +18,8 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
     var interactor: LeaguesListBusinessLogic?
     var router: (NSObjectProtocol & LeaguesListRoutingLogic)?
 
+    private var leagueViewModel = LeagueViewModel.init(cells: [])
+
     var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,19 +44,19 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setup()
         configure()
         setupConstraintsTableView()
+        interactor?.makeRequest(request: .getLeagues)
     }
 
     func displayData(viewModel: LeaguesList.Model.ViewModel.ViewModelData) {
         switch viewModel {
-        case .some:
-            print("some viewController")
-        case .displayLeagues:
-            print("displayLeagues view controller")
+        case .displayLeagues(leaguesViewModel: let leaguesViewModel):
+            leagueViewModel = leaguesViewModel
+            tableView.reloadData()
         }
-
     }
 
     //MARK: - configure
@@ -77,13 +79,13 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
 
 extension LeaguesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return leagueViewModel.cells.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LeaguesCodeCell.reuseId, for: indexPath) as? LeaguesCodeCell else { fatalError("Could not dequeue cell with identifier: (T.defaultReuseIdentifier)") }
-
-        cell.set(viewModel: "LA la league")
+        let cellViewModel = leagueViewModel.cells[indexPath.row]
+        cell.set(viewModel: cellViewModel)
         return cell
     }
 
