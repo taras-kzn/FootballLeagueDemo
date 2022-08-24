@@ -95,8 +95,6 @@
 				846E6D6128A64E0700D84D65 /* LeaguesList */,
 				846E6D5528A61A0C00D84D65 /* SignUp */,
 				84AB2A2128A2BBAD0098365F /* Authorization */,
-				84AB2A3028A2FCA90098365F /* View */,
-				84AB2A2228A2DD400098365F /* Helpers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -165,6 +163,8 @@
 			children = (
 				846E6D5C28A6477F00D84D65 /* Services */,
 				846E6D5628A61E6A00D84D65 /* Classes */,
+				84AB2A3028A2FCA90098365F /* View */,
+				84AB2A2228A2DD400098365F /* Helpers */,
 				84AB2A1E28A2B2CC0098365F /* App */,
 				84AB2A1D28A2AECA0098365F /* Resources */,
 			);

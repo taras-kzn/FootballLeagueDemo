@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LeaguesListDisplayLogic: class {
+protocol LeaguesListDisplayLogic: AnyObject {
     func displayData(viewModel: LeaguesList.Model.ViewModel.ViewModelData)
 }
 
@@ -63,7 +63,10 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
     private func configure() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .none
         tableView.register(LeaguesCodeCell.self, forCellReuseIdentifier: LeaguesCodeCell.reuseId)
+        tableView.backgroundColor = .backgroundLightColor()
+        tableView.showsVerticalScrollIndicator = false
     }
 
     //MARK: - Setup Constraints
@@ -93,12 +96,6 @@ extension LeaguesListViewController: UITableViewDataSource {
 //        print("select row")
 //        interactor?.makeRequest(request: .getLeagues)
 //    }
-
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 300
-//    }
-
-
 }
 
 extension LeaguesListViewController: UITableViewDelegate {

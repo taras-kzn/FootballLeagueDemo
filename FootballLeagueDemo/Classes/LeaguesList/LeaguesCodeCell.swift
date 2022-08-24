@@ -34,13 +34,15 @@ final class LeaguesCodeCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = .semiBold26()
+        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         label.textAlignment = .center
         return label
     }()
 
     let logoLeague: WebImageView = {
         let imageView = WebImageView()
+        imageView.layer.cornerRadius = 16
+        imageView.layer.masksToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -50,7 +52,7 @@ final class LeaguesCodeCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.text = "abbreviationLabel"
-        label.font = .semiBold20()
+        label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.textAlignment = .center
         return label
     }()
@@ -60,6 +62,7 @@ final class LeaguesCodeCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         setupConstraints()
+        backgroundColor = .backgroundLightColor()
     }
 
     required init?(coder: NSCoder) {
@@ -98,13 +101,13 @@ final class LeaguesCodeCell: UITableViewCell {
         titleLabel.topAnchor.constraint(equalTo: leagueView.topAnchor, constant: 16).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: leagueView.leadingAnchor, constant: 16).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: leagueView.trailingAnchor, constant: -16).isActive = true
-        titleLabel.heightAnchor.constraint(equalTo: leagueView.heightAnchor, multiplier: 0.1).isActive = true
+        titleLabel.heightAnchor.constraint(equalTo: leagueView.heightAnchor, multiplier: 0.3).isActive = true
 
         logoLeague.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12).isActive = true
         logoLeague.centerXAnchor.constraint(equalTo: leagueView.centerXAnchor).isActive = true
 
-        logoLeague.widthAnchor.constraint(equalTo: leagueView.heightAnchor, multiplier: 0.6).isActive = true
-        logoLeague.heightAnchor.constraint(equalTo: leagueView.heightAnchor, multiplier: 0.6).isActive = true
+        logoLeague.widthAnchor.constraint(equalTo: leagueView.heightAnchor, multiplier: 0.4).isActive = true
+        logoLeague.heightAnchor.constraint(equalTo: leagueView.heightAnchor, multiplier: 0.4).isActive = true
 
         abbreviationLabel.topAnchor.constraint(equalTo: logoLeague.bottomAnchor, constant: 12).isActive = true
         abbreviationLabel.leadingAnchor.constraint(equalTo: leagueView.leadingAnchor, constant: 16).isActive = true
