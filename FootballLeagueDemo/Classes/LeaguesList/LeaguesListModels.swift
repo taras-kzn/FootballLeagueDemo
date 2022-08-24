@@ -32,6 +32,7 @@ enum LeaguesList {
 
 struct LeagueViewModel {
     struct Cell: leagueCellViewModel {
+        var id: String
         var title: String
         var iconUrlString: String
         var abbreviation: String

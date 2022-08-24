@@ -29,7 +29,7 @@ class LeaguesListPresenter: LeaguesListPresentationLogic {
     }
 
     private func cellViewModel(from data: AllLeagues) -> LeagueViewModel.Cell {
-        return LeagueViewModel.Cell.init(title: data.name,
+        return LeagueViewModel.Cell.init(id: data.id, title: data.name,
                                          iconUrlString: data.logos.light,
                                          abbreviation: data.abbr)
     }
