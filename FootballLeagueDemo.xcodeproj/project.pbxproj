@@ -34,6 +34,7 @@
 		CC79139828B53ABE0051C876 /* LeaguesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79139128B53ABE0051C876 /* LeaguesListInteractor.swift */; };
 		CC79139928B53ABE0051C876 /* LeaguesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC79139228B53ABE0051C876 /* LeaguesListViewController.xib */; };
 		CC79139B28B5ECCB0051C876 /* LeaguesCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79139A28B5ECCB0051C876 /* LeaguesCodeCell.swift */; };
+		CC79139E28B61DF30051C876 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79139D28B61DF30051C876 /* WebImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		CC79139128B53ABE0051C876 /* LeaguesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesListInteractor.swift; sourceTree = "<group>"; };
 		CC79139228B53ABE0051C876 /* LeaguesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaguesListViewController.xib; sourceTree = "<group>"; };
 		CC79139A28B5ECCB0051C876 /* LeaguesCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesCodeCell.swift; sourceTree = "<group>"; };
+		CC79139D28B61DF30051C876 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,10 +238,19 @@
 		84AB2A3028A2FCA90098365F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC79139C28B61DDC0051C876 /* WebImageView */,
 				846E6D5728A61EFB00D84D65 /* CustomControls */,
 				84AB2A2C28A2F2EB0098365F /* ButtonFormView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CC79139C28B61DDC0051C876 /* WebImageView */ = {
+			isa = PBXGroup;
+			children = (
+				CC79139D28B61DF30051C876 /* WebImageView.swift */,
+			);
+			path = WebImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AB2A0C28A2999E0098365F /* AuthViewController.swift in Sources */,
+				CC79139E28B61DF30051C876 /* WebImageView.swift in Sources */,
 				84AB2A2428A2DE0C0098365F /* UIButton+Extension.swift in Sources */,
 				CC79139528B53ABE0051C876 /* LeaguesListRouter.swift in Sources */,
 				84AB2A2F28A2FB930098365F /* StackView+Extension.swift in Sources */,
