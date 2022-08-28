@@ -31,7 +31,7 @@ final class NetworkService: NetworkingProtocol {
         var components = URLComponents()
         components.scheme = API.scheme
         components.host = API.host
-        components.path = API.leagues
+        components.path = path
 
         let url = components.url!
         return url
