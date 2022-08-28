@@ -18,6 +18,7 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
     var interactor: LeaguesListBusinessLogic?
     var router: (NSObjectProtocol & LeaguesListRoutingLogic)?
 
+    private var tableView: UITableView!
     private var leagueViewModel = LeagueViewModel.init(cells: [])
 
     private var loadingIndicator: UIActivityIndicatorView = {
@@ -27,12 +28,6 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
         loading.color = .orange
         loading.style = .large
         return loading
-    }()
-
-    var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
     }()
 
     // MARK: Setup
@@ -55,8 +50,7 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
         super.viewDidLoad()
 
         setup()
-        setupTable()
-        setupConstraintsTableView()
+        setupTableView()
         setupConstraintsLoadingIndicator()
         interactor?.makeRequest(request: .getLeagues)
     }
@@ -71,7 +65,10 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
     }
 
     //MARK: - Setup
-    private func setupTable() {
+    private func setupTableView() {
+        tableView = UITableView(frame: view.bounds)
+        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(tableView)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
@@ -81,15 +78,6 @@ class LeaguesListViewController: UIViewController, LeaguesListDisplayLogic {
     }
 
     //MARK: - Setup Constraints
-    private func setupConstraintsTableView() {
-        view.addSubview(tableView)
-
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    }
-
     private func setupConstraintsLoadingIndicator() {
         tableView.addSubview(loadingIndicator)
         loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
