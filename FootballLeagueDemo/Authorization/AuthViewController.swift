@@ -42,9 +42,6 @@ class AuthViewController: UIViewController {
         stackView.topAnchor.constraint(equalTo: logoImageView.topAnchor, constant: 280).isActive = true
         stackView.leadingAnchor.constraint(equalTo: logoImageView.leadingAnchor, constant: 140).isActive = true
         stackView.trailingAnchor.constraint(equalTo: logoImageView.trailingAnchor, constant: -140).isActive = true
-
-
-
     }
 }
 
